@@ -3,20 +3,20 @@ import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 
 const form = document.querySelector('.form');
-const fulf = document.querySelector('.js-fuifilled');
-const delay = document.querySelector('.js-delay');
+const delayInput = document.querySelector('.js-delay');
 
 form.addEventListener('submit', e => {
     e.preventDefault();
   
-    const delayValue = Number(delay.value);
+    const delayValue = Number(delayInput.value);
+    const state = form.querySelector('input[name="state"]:checked').value;
     
     const promise = new Promise((resolve, reject) => {
         setTimeout(() => {
-            if (fulf.checked) {
+            if (state === 'fulfilled') {
                 resolve(delayValue)
-            } else {
-                reject(delayValue)
+            } else if(state === 'rejected'){
+                reject(delayValue);
             }
         }, delayValue)
     });
