@@ -15,6 +15,30 @@
           Snackbar
         </h1>
       </div>
+
+      <form class="form">
+        <label class="form-field">
+          <span class="form-label">Delay (ms)</span>
+          <input class="form-input js-delay" type="number" name="delay" required />
+        </label>
+      
+        <fieldset class="form-fieldset">
+          <legend class="form-legend">State</legend>
+          
+          <label class="form-radio-label">
+            <input class="form-radio js-fuifilled" type="radio" name="state" value="fulfilled" required />
+            Fulfilled
+          </label>
+          
+          <label class="form-radio-label">
+            <input class="form-radio js-rejected" type="radio" name="state" value="rejected" required />
+            Rejected
+          </label>
+        </fieldset>
+      
+        <button class="form-button" type="submit">Create notification</button>
+      </form>
+
     </main>
 
     <script type="module" src="./js/2-snackbar.js"></script>

@@ -34,3 +34,47 @@
 .value{
   font-size: 45px;
 }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 320px;
+  margin-left: 10px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-label{
+  text-align: left;
+}
+
+.form-input {
+  padding: 6px;
+  font-size: 14px;
+}
+
+.form-fieldset {
+  display: flex;
+  gap: 16px;
+  padding: 10px;
+}
+
+.form-legend{
+  text-align: left;
+}
+
+.form-radio-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.form-button {
+  padding: 8px;
+  cursor: pointer;
+}
